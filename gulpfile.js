@@ -1,8 +1,13 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
-
-gulp.task('build', function(){
-    gulp.src('src/**/*.ts')
-    .pipe(ts())
-    .pipe(gulp.dest('dist'));
-})
+ 
+var tsProject = ts.createProject('tsconfig.json',{
+    outFile: "customutils.js"
+});
+ 
+gulp.task('scripts', function() {
+    var tsResult = gulp.src(['src/*.ts', 'typings/**/*.ts'])
+        .pipe(tsProject())
+        .pipe(gulp.dest('dist'));
+ 
+});

@@ -1,4 +1,4 @@
-namespace Riksarkivet.Extension {
+namespace Riksarkivet.Custom {
     export class Utils {
 
         static SetUrlAfter(searchvalue: string, value: string, doc?: Document): void {
@@ -27,6 +27,13 @@ namespace Riksarkivet.Extension {
             if (window.top.history.replaceState) {
                 window.top.history.replaceState(null, null, startUrl + searchvalue + value + endUrl);
             }
+        }
+
+        public GetBildIdFromCanvas(canvas: Manifesto.ICanvas) {
+            var bildid = canvas.getImages()[0].getResource().getServices()[0].id;
+            bildid = bildid.substr(bildid.indexOf("!") + 1);
+
+            return bildid;
         }
 
     }
