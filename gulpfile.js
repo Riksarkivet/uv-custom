@@ -3,10 +3,8 @@ var ts = require('gulp-typescript');
 var merge = require('merge2');
  
 var tsProject = ts.createProject('tsconfig.json',{
-    outFile: "customutils.js",
     declaration: true
 });
-//var tsProject = ts.createProject('tsconfig.json', {declaration:true});
  
 gulp.task('scripts', function() {
     var tsResult = gulp.src(['src/*.ts', 'typings/**/*.ts'])
