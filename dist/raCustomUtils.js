@@ -29,10 +29,5 @@ var RaCustomUtils = (function () {
             window.top.history.replaceState(null, null, startUrl + searchvalue + value + endUrl);
         }
     };
-    RaCustomUtils.prototype.GetBildIdFromCanvas = function (canvas) {
-        var bildid = canvas.getImages()[0].getResource().getServices()[0].id;
-        bildid = bildid.substr(bildid.indexOf("!") + 1);
-        return bildid;
-    };
     return RaCustomUtils;
 }());
