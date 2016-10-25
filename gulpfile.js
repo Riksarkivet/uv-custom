@@ -6,7 +6,7 @@ var tsProject = ts.createProject('tsconfig.json',{
     declaration: true
 });
  
-gulp.task('scripts', function() {
+gulp.task('build', function() {
     var tsResult = gulp.src(['src/*.ts', 'typings/**/*.ts'])
         .pipe(tsProject());
  
@@ -16,3 +16,5 @@ gulp.task('scripts', function() {
     ]);        
  
 });
+
+gulp.task('default', ['build']);
