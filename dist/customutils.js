@@ -2,48 +2,6 @@ var Riksarkivet;
 (function (Riksarkivet) {
     var Custom;
     (function (Custom) {
-        var Clipboard = (function () {
-            function Clipboard() {
-            }
-            Clipboard.copy = function (text) {
-                var $tempDiv = $("<div style='position:absolute;left:-9999px'>");
-                var brRegex = /<br\s*[\/]?>/gi;
-                text = text.replace(brRegex, "\n");
-                $("body").append($tempDiv);
-                $tempDiv.append(text);
-                var $tempInput = $("<textarea>");
-                $tempDiv.append($tempInput);
-                $tempInput.val($tempDiv.text()).select();
-                document.execCommand("copy");
-                $tempDiv.remove();
-            };
-            Clipboard.supportsCopy = function () {
-                return document.queryCommandSupported && document.queryCommandSupported('copy');
-            };
-            return Clipboard;
-        }());
-        Custom.Clipboard = Clipboard;
-    })(Custom = Riksarkivet.Custom || (Riksarkivet.Custom = {}));
-})(Riksarkivet || (Riksarkivet = {}));
-var Riksarkivet;
-(function (Riksarkivet) {
-    var Custom;
-    (function (Custom) {
-        var Device = (function () {
-            function Device() {
-            }
-            Device.isTouch = function () {
-                return !!("ontouchstart" in window) || window.navigator.msMaxTouchPoints > 0;
-            };
-            return Device;
-        }());
-        Custom.Device = Device;
-    })(Custom = Riksarkivet.Custom || (Riksarkivet.Custom = {}));
-})(Riksarkivet || (Riksarkivet = {}));
-var Riksarkivet;
-(function (Riksarkivet) {
-    var Custom;
-    (function (Custom) {
         var Utils = (function () {
             function Utils() {
             }
