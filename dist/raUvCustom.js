@@ -1,7 +1,7 @@
-var RaCustomUtils = (function () {
-    function RaCustomUtils() {
+var RaUvCustom = (function () {
+    function RaUvCustom() {
     }
-    RaCustomUtils.SetUrlAfter = function (searchvalue, value, doc) {
+    RaUvCustom.SetUrlAfter = function (searchvalue, value, doc) {
         if (!doc) {
             doc = window.document;
         }
@@ -29,5 +29,5 @@ var RaCustomUtils = (function () {
             window.top.history.replaceState(null, null, startUrl + searchvalue + value + endUrl);
         }
     };
-    return RaCustomUtils;
+    return RaUvCustom;
 }());
