@@ -11,10 +11,10 @@ class RaUvCustom {
         var startUrl = url.substr(0, searchIndex);
         var endUrl = url.substr(searchIndex);
 
-        var indexAfter = endUrl.indexOf("?");
-        if (indexAfter === -1) { indexAfter = endUrl.indexOf("&"); }
+        var indexAfter = endUrl.indexOf("#");
+        if (indexAfter === -1) { indexAfter = endUrl.indexOf("?"); }
 
-        if (indexAfter === -1) { indexAfter = endUrl.indexOf("#"); }
+        if (indexAfter === -1) { indexAfter = endUrl.indexOf("&"); }
 
 
         if (indexAfter !== -1) {
