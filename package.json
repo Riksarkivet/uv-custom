@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/Riksarkivet/uv-custom#readme",
   "devDependencies": {
+    "@iiif/manifold": "1.2.24",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.0.2",
-    "manifold": "git://github.com/viewdir/manifold.git",
     "merge2": "^1.0.2",
     "typescript": "^2.0.3"
   }

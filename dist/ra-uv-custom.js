@@ -1,4 +1,4 @@
-var RaUvCustom = (function () {
+var RaUvCustom = /** @class */ (function () {
     function RaUvCustom() {
     }
     RaUvCustom.SetUrlAfter = function (searchvalue, value, doc) {
@@ -12,12 +12,12 @@ var RaUvCustom = (function () {
         }
         var startUrl = url.substr(0, searchIndex);
         var endUrl = url.substr(searchIndex);
-        var indexAfter = endUrl.indexOf("?");
+        var indexAfter = endUrl.indexOf("#");
         if (indexAfter === -1) {
-            indexAfter = endUrl.indexOf("&");
+            indexAfter = endUrl.indexOf("?");
         }
         if (indexAfter === -1) {
-            indexAfter = endUrl.indexOf("#");
+            indexAfter = endUrl.indexOf("&");
         }
         if (indexAfter !== -1) {
             endUrl = endUrl.substr(indexAfter);
